@@ -76,6 +76,18 @@ class App extends React.Component {
        this.state.showerror && 
        this.state.error 
        }
+
+       <p>
+         City : {this.state.displayName}
+       </p>
+
+       <p>
+         Longitude : {this.state.lon}
+       </p>
+
+       <p>
+         Latiude : {this.state.lat}
+       </p>
       </>
     )
   }
