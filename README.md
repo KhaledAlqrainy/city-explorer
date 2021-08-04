@@ -23,12 +23,12 @@ Get URL and request data.
 
 ## Time Estimates
 
-Name of feature: 
+Name of feature: solve the lab
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour.
 
-Start time: _____
+Start time: 6:30 am
 
-Finish time: _____
+Finish time: 8:00
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1.5 hors.
