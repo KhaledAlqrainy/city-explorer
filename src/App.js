@@ -2,7 +2,9 @@
 import React from 'react';
 import axios from 'axios';
 import Weather from './components/Weather';
-import { Container } from 'react-bootstrap';
+import Movies from './components/Movies'
+
+import { Form, Button, Table, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -40,16 +42,23 @@ class App extends React.Component {
           map: true,
           showerror:false,
         })
+      }
 
+      catch{}
 
-        // http://localhost:3001/weather?city_name=amman
-        
+      try {
         const weather = await axios.get(`http://localhost:3001/weather?city_name=${cityName}`);
 
         this.setState({
           weather: weather.data, showCards: true
         });
-      }
+           }
+        // http://localhost:3001/weather?city_name=amman
+      
+        
+
+        
+      
 
       catch (eror) {
 
@@ -59,8 +68,25 @@ class App extends React.Component {
           showCards: false      
         })
       }
+      try {
+        const movies = await axios.get(`mSjXydZRVkSuJXcfMURFNgfcSKMmSEANpAKgBdcJgvc/movies?cityName=${cityName}`);
+
+      this.setState({ movies: movies.data, showCards: true });
+      }
+
+      catch (error) {
+        this.setState(
+          {
+            showErr: true,
+            err: `Error: ${error.response.status}, ${error.response.data.error}`,
+            showCards: false,
+          }
+        )
+      }
+      
     }
   
+      
 
 
   render() {
@@ -93,8 +119,15 @@ class App extends React.Component {
          Latiude : {this.state.lat}
        </p>
 
+        <div>
        <Container>{this.state.showCards &&
           <Weather weatherdata={this.state.weather} cityName={this.state.name} />}</Container>
+          </div>
+
+          <div>
+          <Container>{this.state.showCards &&
+            <Movies moviesData={this.state.movies} cityName={this.state.name} />}</Container><br /> <br /> <br />
+        </div>
 
          {
            this.state.map &&
