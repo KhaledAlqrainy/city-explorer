@@ -11,6 +11,7 @@ Get URL and request data.
 
 * Node.js
 * Javascript
+* Bootstrap
 
 
 ## Change Log
@@ -23,12 +24,12 @@ Get URL and request data.
 
 ## Time Estimates
 
-Name of feature: solve the lab
+Name of feature: Movies
 
-Estimate of time needed to complete: 1 hour.
+Estimate of time needed to complete: 4 hour.
 
-Start time: 6:30 am
+Start time: 11:00 pm
 
-Finish time: 8:00
+Finish time: 6:00 am
 
-Actual time needed to complete: 1.5 hors.
+Actual time needed to complete: 7 hours.
