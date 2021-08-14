@@ -1,5 +1,6 @@
 import React from 'react';
 import WeatherDay from './WeatherDay';
+import Container from 'react-bootstrap/Container';
 
 
 class Weather extends React.Component {
@@ -10,6 +11,11 @@ class Weather extends React.Component {
                     return (
                     <WeatherDay weather={weather} />
                     )
+                    return <Container >
+                        Date: {weather.date}
+                        Description : {weather.description}
+
+                    </Container>
                 })}
             </div>
         )

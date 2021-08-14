@@ -3,7 +3,6 @@ import { Container } from 'react-bootstrap';
 
 import Movie from "./Movie";
 
-
 class Movies extends React.Component {
     render() {
 
@@ -20,6 +19,26 @@ class Movies extends React.Component {
                         })}
                     </Container>
                 
+                {this.props.moviesData.map((movie) => {
+                    return (
+                    
+                
+                    <Container >
+                        Title: {movie.title}
+                        Overview : {movie.overview}
+                        Release Date :{movie.release_date}
+                        Popularity : {movie.popularity}
+                        Vote Average : {movie.vote_average}
+                        Vote Count : {movie.vote_count}
+
+
+
+                    </Container>
+              
+            
+                    )
+           
+                })}
             </div>
         )
     }

@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  text-align: center;
+  color: darkgrey;
+}
+
+form {
+  align-content: center;
+  padding-left: 550px;
+  color: aliceblue;
+}
+
+input {
+  align-content: center;
+}
+
+*{
+  background-color: #282c34;
+}
+
+img {
+  align-content: center;
+}
